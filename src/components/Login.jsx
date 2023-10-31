@@ -6,7 +6,7 @@ import { AuthContext } from "../Providers/authProvider";
 
 
 const Login = () => {
-    const {singInUser} =useContext(AuthContext)
+    const {singInUser , googlePopUp} =useContext(AuthContext)
     const navigate = useNavigate();
     const handleLogin = e =>{
         e.preventDefault()
@@ -23,6 +23,11 @@ const Login = () => {
             navigate('/')
         })
         .catch((error) =>{ console.log(error)})
+    }
+    const handleGoogle = ()=>{
+        googlePopUp()
+        .then(result => console.log(result))
+        .catch(error => console.error(error))
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -56,6 +61,7 @@ const Login = () => {
 
                     <div className="ml-8"><p>if havnt id go to<button className="btn btn-link"> <Link to={'/register'}>register</Link></button>
                     <button className="btn btn-link"> <Link to={'/'}>Home</Link></button></p></div>
+                    <button onClick={handleGoogle} className="btn btn-ghost">google </button>
                 </div>
             </div>
         </div>

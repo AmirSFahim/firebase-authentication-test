@@ -59,6 +59,7 @@ const Register = () => {
 
                     <div className="ml-8"><p>if havnt id go to<button className="btn btn-link"> <Link to={'/login'}>Login</Link></button>
                     <button className="btn btn-link"> <Link to={'/'}>Home</Link></button></p></div>
+                    
                 </div>
             </div>
         </div>

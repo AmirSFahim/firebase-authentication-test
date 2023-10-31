@@ -24,8 +24,8 @@ const Header = () => {
     <li><Link to={'/register'}>Register</Link></li>
     {
       user && <> 
-      <li><Link to={'/orders'}>Orders</Link></li> 
-      </>
+      <li><Link to={'/orders'}>Orders</Link></li>
+      <li><Link to={'/profile'}>Profile</Link></li> </>
     }
   </>
   return (
